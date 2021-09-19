@@ -1,0 +1,57 @@
+
+
+
+@media (min-width: 576px) and (max-width: 790px) {
+
+}
+
+@media (min-width: 1200px) and (max-width: 1366px) {
+
+}
+@media (min-width: 991px) {
+  .login-container { 
+    .login-content {
+      left: initial !important;
+      right: rem(256) !important;
+    }
+  }
+}
+@media (min-width: 1367px) {
+
+}
+
+@media (max-width: 767px) {  
+  
+}
+@media (min-width: 770px) and (max-width: 991px) {
+
+  }
+
+  @media (min-width: 830px) and (max-width: 1080px) {
+
+  }
+  /*tablet-landscape*/
+@media (min-width: 769px) and (max-width: 1024px) {
+  html {
+    font-size: 1.5vw;
+}
+}
+
+/*tablet-potrait*/
+
+@media (min-width: 481px) and (max-width: 769px) {
+  html {
+    font-size: 2.5vw;
+}
+}
+
+
+/* Mobile and down */
+@media (max-width: 480px) {
+  html {
+    font-size: 3.2vw;
+}
+  .login-content {
+
+}
+}  

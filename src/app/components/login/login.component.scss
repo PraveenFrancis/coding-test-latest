@@ -1,0 +1,38 @@
+@import '../../../sass/base/all';
+.login-container {
+    background-color: #06527f;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    .background-image {
+      width: 100%;
+    }
+  
+    .login-content {
+      background: $white;
+      width: rem(450);
+      height: 25.5rem;
+      position: absolute;
+      left: 0;
+      right: 0;
+      margin: auto;
+      top: 0;
+      bottom: 0;
+      border-radius: rem(10);
+      .form-wrapper {
+          padding: 0 rem(50);
+      }
+    }
+  }
+
+
+
+  .m-t-10{
+      margin-top: 8rem;
+  }
+  .m-b-2{
+      margin-bottom: 2rem;
+  }

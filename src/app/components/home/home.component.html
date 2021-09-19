@@ -1,0 +1,60 @@
+<ng-container *ngIf="!showAddUser">
+    <div class="search-bar align-item-center">
+        <div class="search-input-bar">
+            <input type="search" [(ngModel)]="propertyName" placeholder="Search" class="search">
+            <img *ngIf="!propertyName" src="assets/search.svg" alt="reminder" class="search-icon" />
+        </div>
+        <div class="button">
+            <button type="submit" class="btn btn-blue" (click)="addUser()">Add New User</button>
+        </div>
+    </div>
+
+    <div class="table-content">
+        <div class="t-head property-head">
+            <div class="head w-25 br-rght">
+                First Name
+            </div>
+            <div class="head w-25 header-line">
+                Last Name
+            </div>
+            <div class="head w-25 header-line">
+                User Name
+            </div>
+            <div class="head w-25 header-line">
+                Email Address
+            </div>
+     
+        </div>
+        <div class="inner-content" *ngIf="noRecords ">
+            <div class="content-tag">
+                <div class="tag w-100">
+                    No Records Found.
+                </div>
+            </div>
+        </div>
+        <div class="inner-content" *ngIf="allUsers && allUsers.results">
+            <div class="content-tag property-content-tag" *ngFor="let users of allUsers.results | filterPipe: propertyName">
+                <div class="tag w-25">
+                    <div class="address-main">{{users?.user?.name?.first}}
+                    </div>
+                </div>
+                <div class="tag w-25">
+                    <div class="address-main">{{users?.user?.name?.last}}
+                    </div>
+
+                </div>
+                <div class="tag w-25">
+                    <div class="address-main">{{users?.user?.username}}
+                    </div>
+
+                </div>
+                <div class="tag w-25">
+                    <div class="address-main">{{users?.user?.email}}
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</ng-container>
+<router-outlet></router-outlet>

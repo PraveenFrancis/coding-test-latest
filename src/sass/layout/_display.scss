@@ -1,0 +1,42 @@
+.d-none{
+  display: none;
+}
+.d-block{
+  display: block;
+}
+.d-n-block{
+  display: inline-block;
+}
+.d-flex{
+  @include flexbox();
+}
+body {
+  font-family: 'Lato', sans-serif;
+}
+html {
+  font-size: .85vw;
+}
+.flex-wrap{
+  @include flex-wrap(wrap);
+}
+.flex-nowrap{
+  @include flex-wrap(nowrap);
+}
+.justify-content-center{
+  @include justify-content(center);
+}
+.justify-content-left{
+  @include justify-content(left);
+}
+.justify-content-right{
+  @include justify-content(right);
+}
+.align-items-center{
+  @include align-items(center);
+}
+.align-flex-end {
+  display: flex;
+  align-self: flex-end;
+  align-items: flex-end;
+  flex-direction: column;
+}

@@ -1,0 +1,377 @@
+.table-content {
+    padding: rem(30);
+  
+    .t-head {
+      display: flex;
+      width: 100%;
+      background: $blue-var-2;
+      padding: rem(18);
+      border-radius: rem(5) rem(5) 0 0;
+  
+      .header-line {
+        border-left: rem(2) solid #eaedf2;
+        padding-left: rem(17);
+        height: rem(25);
+        padding-top: rem(3);
+        padding-bottom: rem(3);
+      }
+  
+      .head {
+        color: $white;
+        font-weight: bold;
+        font-size: rem(17);
+        margin: auto;
+  
+        .bc-arrow {
+          width: rem(14);
+          height: rem(14);
+          cursor: pointer;
+        }
+  
+        .reminder {
+          width: rem(20);
+          height: rem(20);
+          float: right;
+        }
+      }
+  
+      .br-rght {
+        &:after {
+          content: "";
+        }
+  
+      }
+    }
+  
+    .inner-content {
+      .content-tag {
+        display: flex;
+        width: 100%;
+        box-shadow: 0 5px 10px 0 rgba(0, 23, 87, 0.14);
+        border-radius: rem(4);
+        padding: rem(18);
+        background: $white;
+        margin-bottom: 2px;
+        align-items: center;
+  
+        .tag {
+          color: $grey-var-2;
+          font-weight: 400;
+          font-size: rem(16);
+          line-height: rem(20);
+          padding-right: rem(15);
+          word-break: break-all;
+  
+          .rght-arrow {
+            width: rem(12);
+            height: rem(12);
+            float: right;
+          }
+  
+          p {
+            color: $black-var;
+            font-weight: bold;
+            // padding-bottom: rem(15);
+            text-align: justify;
+          }
+  
+          text-align: justify;
+  
+          .completed {
+            @include flexbox;
+            @include align-items(center);
+            @include justify-content(space-between);
+            
+            span {
+              &.collapse-icon {
+                
+                &.side-down-icon-task {
+                  cursor: pointer;
+                  color: $grey-var-2;
+                  height: rem(15);
+                  width: rem(10);
+              }
+              }
+              
+            }
+            .status {
+              color: #007709;
+              background: #8adb8f;
+              border-radius: 0.9375rem;
+              padding: rem(3) rem(15);
+              margin-right: rem(10);
+              &.red {
+                background: #f59c9c;
+                color: $black-var;
+              }
+              &.grey {
+                background: #cac7c7;
+                color: $black-var;
+              }
+              &.green {
+              background: #8adb8f;
+  
+              }
+            }
+          }
+          @media only screen and (min-width: 1024px){
+            .completed{
+              position: relative;
+              @include justify-content(unset);
+              .collapse-icon{
+                position: absolute;
+                right: 0;
+              }
+            }
+          }
+          .pending {
+            span {
+              color: $brown;
+              background: $brown-var;
+              padding: rem(5) rem(30);
+              border-radius: rem(15);
+            }
+          }
+  
+          .action-icons {
+            display: flex;
+  
+            .icon {
+              flex-basis: 100%;
+              cursor: pointer;
+  
+              .eye {
+                width: rem(21.8);
+                height: rem(13.9);
+              }
+  
+              .share {
+                width: rem(18.1);
+                height: rem(20);
+              }
+  
+              .download {
+                width: rem(20);
+                height: rem(18.9);
+              }
+            }
+          }
+  
+          .discount {
+            text-align: center;
+            position: relative;
+            bottom: rem(12);
+  
+            img {
+              width: 100%;
+              position: absolute;
+              left: 0;
+              top: 0;
+            }
+  
+            .text {
+              position: relative;
+              top: rem(18);
+  
+              .percentage {
+                color: $white;
+                font-size: rem(30);
+                font-weight: 900;
+              }
+  
+              .dis {
+                color: $white;
+                font-size: rem(10);
+                font-weight: bold;
+              }
+            }
+  
+          }
+  
+          .promo {
+            border: 2px dotted $blue-var-6;
+            padding: rem(15) 0;
+            text-align: center;
+            border-radius: rem(26);
+  
+            span {
+              color: $blue-var-6;
+              font-size: rem(16);
+              margin-left: rem(10);
+            }
+          }
+          a {
+              color: $grey-var-2;
+          }
+        }
+      }
+    }
+  }
+  
+  .inner-list .inner-grid {
+    .table-grid-scn {
+      display: flex;
+      width: 100%;
+  
+      .t-head-back-1 {
+        width: 70%;
+      }
+  
+      .t-head-back {
+        background: $grey-var-3;
+        width: 30%;
+        border-top-right-radius: rem(4);
+        border-top-left-radius: rem(4);
+      }
+    }
+  }
+  
+  .chat-wrapper {
+    display: flex;
+    box-shadow: 0 4px 26px 0 rgba(2, 27, 67, 0.25);
+    background: #fff;
+    border-bottom-left-radius: rem(4);
+    .chat-type {
+      width: 70%;
+  
+      .chat-inner-main {
+        height: rem(550);
+        overflow-x: hidden;
+        overflow-y: scroll;
+        border-right: 1px solid $grey-light;
+        padding: rem(10) rem(20);
+        scroll-behavior: smooth;
+  
+        .day {
+          color: $grey-var-4;
+          font-size: rem(16);
+          font-weight: bold;
+          padding: rem(15) 0;
+        }
+  
+        .name {
+          color: $grey-var-5;
+          font-size: rem(14);
+          font-weight: bold;
+          padding: 0 0 rem(10) 0;
+  
+          span {
+            margin-right: rem(10);
+            font-size: rem(45);
+          }
+        }
+  
+        .msg {
+          margin: rem(20) 0;
+  
+          span {
+            color: $grey-var-2;
+            font-size: rem(16);
+            font-weight: bold;
+            border-radius: 0 30px 30px 30px;
+            background: $grey-var-7;
+            padding: rem(15) rem(30);
+          }
+        }
+  
+        .time {
+          color: $grey-var-5;
+          font-size: rem(14);
+          font-weight: bold;
+          padding: rem(10) 0;
+        }
+  
+        .active {
+          .name {
+            span {
+              color: $green-var-1;
+            }
+  
+          }
+        }
+  
+        .chat-to {
+          .msg {
+            text-align: right;
+  
+            span {
+              border-radius: 30px 30px 0px 30px;
+              background: $grey-var-6;
+            }
+          }
+        }
+      }
+    }
+  
+    .send-msg {
+      box-shadow: 0 -3px 6px 0 rgba(14, 91, 168, 0.11);
+      display: flex;
+      width: 100%;
+  
+      .form-inner {
+        width: 85%;
+  
+        .form-chat {
+          width: 100%;
+          padding: rem(20);
+          border: none;
+        }
+      }
+  
+      .form-inner-submit {
+        padding: rem(16) 0 0 0;
+  
+        .send-img {
+          border-right: 2px solid $grey-var;
+          margin-right: rem(10);
+          padding-right: 10px;
+          cursor: pointer;
+        }
+  
+        .upload-img {
+          padding-left: 10px;
+          cursor: pointer;
+        }
+      }
+  
+  
+    }
+  
+    .chat-person {
+      width: 30%;
+      padding: rem(20);
+  
+  
+      .inner {
+          position: relative;
+        .chat-person-img {
+          width: rem(34);
+          height: rem(34);
+          border-radius: 50%;
+          object-fit: cover;
+        }
+        .col-2:after {
+        //   content: url("src/assets/images/Offline.svg");
+          position: absolute;
+          left: 12%;
+          top: 0;
+        }
+        .text {
+            color: $grey-var;
+            font-size: rem(15);
+            font-weight: bold;
+            padding: rem(7) 0 0 0;
+        }
+        margin-bottom: rem(20);
+      }
+      .active {
+          .col-2:after {
+            //    content: url("src/assets/images/online.svg");
+            }
+      }
+    }
+  
+  }
+  
+  
+  

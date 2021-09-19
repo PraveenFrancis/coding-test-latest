@@ -1,0 +1,111 @@
+<div class="table-content">
+    <div class="form-wrapper">
+        <div class="form-group">
+            <form [formGroup]="createUserForm"  (ngSubmit)="createUser()">
+                <div class="card m-b-30 border-radius-top">
+                    <div class="row">
+                        <div class="col-4 col-xs-12 col-sm-6 col-md-4">
+                            <div class="form-element">
+                                <div class="label-content">
+                                    <div class="label">
+                                        Gender
+                                    </div>
+                                </div>
+                                <input type="text" formControlName="gender" class="form-control" placeholder="Gender" />
+                            </div>
+                        </div>
+                        <div class="col-4 col-xs-12 col-sm-6 col-md-4">
+                            <div class="form-element">
+                                <div class="label-content">
+                                    <div class="label">
+                                        Title
+                                    </div>
+                                </div>
+                                <input type="text" formControlName="title" class="form-control" placeholder="Title" />
+                            </div>
+                        </div>
+                        <div class="col-4 col-xs-12 col-sm-6 col-md-4">
+                            <div class="form-element">
+                                <div class="label-content">
+                                    <div class="label">
+                                        Frist Name
+                                        <span class="error-msg">*</span>
+                                    </div>
+                                </div>
+                                <input type="text" formControlName="first_name" class="form-control"
+                                    placeholder="First Name" />
+                            </div>
+                        </div>
+                        <div class="col-4 col-xs-12 col-sm-6 col-md-4">
+                            <div class="form-element">
+                                <div class="label-content">
+                                    <div class="label">
+                                        Last Name
+                                        <span class="error-msg">*</span>
+                                    </div>
+                                </div>
+                                <input type="text" formControlName="last_name" class="form-control"
+                                    placeholder="Lat Name" />
+                            </div>
+                        </div>
+                        <div class="col-4 col-xs-12 col-sm-6 col-md-4">
+                            <div class="form-element">
+                                <div class="label-content">
+                                    <div class="label">
+                                        User Name
+                                    </div>
+                                </div>
+                                <input type="text" formControlName="user_name" class="form-control"
+                                    placeholder="User Name" />
+                            </div>
+                        </div>
+                        <div class="col-4 col-xs-12 col-sm-6 col-md-4">
+                            <div class="form-element">
+                                <div class="label-content">
+                                    <div class="label">
+                                        Password
+                                    </div>
+                                </div>
+                                <input type="password" formControlName="password" class="form-control"
+                                    placeholder="Password" />
+                            </div>
+                        </div>
+                        <div class="col-4 col-xs-12 col-sm-6 col-md-4">
+                            <div class="form-element">
+                                <div class="label-content">
+                                    <div class="label">
+                                        Phone No
+                                    </div>
+                                </div>
+                                <input type="text" formControlName="phone" class="form-control"
+                                    placeholder="(000) 000 0000" />
+                            </div>
+                        </div>
+
+                        <div class="col-4 col-xs-12 col-sm-6 col-md-4">
+                            <div class="form-element">
+                                <div class="label-content">
+                                    <div class="label">
+                                        Email
+                                    </div>
+                                </div>
+                                <input type="text" formControlName="email" class="form-control" placeholder="Email" />
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-4 col-sm-6"></div>
+                    <div class="col-4 col-xs-12 col-sm-6">
+                        <div class="button-grid">
+                            <div class="button">
+                                <button type="submit" class="btn btn-blue">Submit</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
